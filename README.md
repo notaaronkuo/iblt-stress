@@ -1,4 +1,4 @@
-# IBLT-Stress: Predictive Stress Analysis
+# IBLT-Stress: Predicting Stress From Text
 
 ## Introduction
 In this project, we develop a stress detection system that leverages machine learning techniques within an instance-based learning framework to provide users with accurate and personalized stress assessments based on their textual input. The system operates by first processing the user's text corpus through a pretrained Support Vector Machine (SVM) model, SVMt, which converts words into a vector of probabilities representing various emotions, denoted as Pe. Subsequently, Pe is utilized by another pretrained SVM model, SVMe, to predict the probabilistic stress level, referred to as Sp. Concurrently, a k-Nearest Neighbors (kNN) model operates in parallel with SVMe, storing Pe exclusively from the user's input. If the kNN model gathers sufficient Pe from the user input to generate a stress level prediction, its output is also considered. Given the potential for conflicting results between SVMt and kNN, a decision-making entity known as the Judge is employed to determine the most appropriate stress level output.
